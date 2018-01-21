@@ -41,6 +41,8 @@ Regarding filtering between completed and active items, we can use Redux state t
 ### Jest Test
 For redux apps, one of the most important part that we can test are the reducers since they handle all the actions. The test files are in `App/reducers/__tests__`. We want to test all functionalities and edge cases like when it started with the initialState, when we do the same action twice...
 
+![alt text](https://raw.githubusercontent.com/changey/ReactNativeTodo/master/readmeImg/tests.png)
+
 ### Animations
 
 There are tools like `Animated`, `LayoutAnimation`... that can be used for animation. Great animations can take lots of time. For demonstration purpose, `Animated` is used in `App/Components/TaskRow.js` to add animation when adding a new to-do task. Essentially we can define the timing for the animation
