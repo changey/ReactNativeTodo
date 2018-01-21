@@ -1,5 +1,7 @@
 # ReactNativeTodo
 
+![alt text](https://raw.githubusercontent.com/changey/ReactNativeTodo/master/readmeImg/demo.gif)
+
 ### A To-Do App
 
 It's an interesting challenge. Even though a to-do app may seem fundamental, it demonstrate many of the common actions toward objects in the state like add, delete, edit, filter...
