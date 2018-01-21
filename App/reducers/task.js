@@ -18,11 +18,6 @@ const initialState = [
     text: 'Grocery Shopping',
     completed: true,
   },
-  {
-    taskId: uuidv4(),
-    text: 'Grocery Shopping',
-    completed: true,
-  },
 ];
 
 export default function taskReducer(state = initialState, action) {
