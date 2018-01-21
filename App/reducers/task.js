@@ -5,20 +5,7 @@ import uuidv4 from 'uuid/v4';
 
 import * as actions from '../actions/actionTypes';
 
-// Provide an intial state so it's easier for development
-// Set the initialState to [] when we don't want any initial tasks
-const initialState = [
-  {
-    taskId: uuidv4(),
-    text: 'Bake Cookies',
-    completed: false,
-  },
-  {
-    taskId: uuidv4(),
-    text: 'Grocery Shopping',
-    completed: true,
-  },
-];
+const initialState = [];
 
 export default function taskReducer(state = initialState, action) {
   switch (action.type) {
