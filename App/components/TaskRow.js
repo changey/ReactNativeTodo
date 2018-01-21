@@ -2,6 +2,7 @@
 
 import React, { Component } from "react";
 import {
+  Animated,
   Button,
   Dimensions,
   Image,
@@ -54,9 +55,17 @@ const ANIMATION_LENGTH = 300;
 class TaskRow extends Component {
   constructor(props) {
     super(props);
+    this.animated = new Animated.Value(0);
     this.state = {
       editing: false,
     };
+  }
+
+  componentDidMount() {
+    Animated.timing(this.animated, {
+      duration: ANIMATION_LENGTH,
+      toValue: 1,
+    }).start();
   }
 
   render() {
@@ -65,8 +74,23 @@ class TaskRow extends Component {
     const imgSrc = _.get(item, 'completed', false) ? Checked : Unchecked;
     const textValue = _.get(item, 'text', '');
 
+    const listRowStyle = [
+      { opacity: this.animated },
+      {
+        transform: [
+          { scale: this.animated },
+          {
+            rotate: this.animated.interpolate({
+              inputRange: [0, 1],
+              outputRange: ['30deg', '0deg'],
+            })
+          }
+        ],
+      },
+    ]
+
     return (
-      <View>
+      <Animated.View style={listRowStyle}>
         <View style={styles.listItemRow}>
           <View style={styles.mainItem}>
             <TouchableOpacity
@@ -105,7 +129,7 @@ class TaskRow extends Component {
             )
           }
         </View>
-      </View>
+      </Animated.View>
     )
   }
 }
