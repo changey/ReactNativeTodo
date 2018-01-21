@@ -1,0 +1,27 @@
+{
+  "name": "Pared",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "16.0.0-alpha.12",
+    "react-logger": "^1.1.0",
+    "react-native": "^0.45.1",
+    "react-redux": "4.2.1",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-jest": "22.1.0",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.1.4",
+    "lodash": "^4.17.4",
+    "react-test-renderer": "16.0.0-alpha.12",
+    "uuid": "^3.2.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
