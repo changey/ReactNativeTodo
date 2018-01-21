@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: SCREEN_WIDTH * 0.9,
   },
   listContainer: {
-    height: SCREEN_HEIGHT * 0.4,
+    height: SCREEN_HEIGHT * 0.35,
   },
   textInput: {
     height: 40,
